@@ -1,0 +1,37 @@
+﻿@model IEnumerable<database.Models.Product>
+
+@{
+    ViewBag.Title = "view_details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>view_details</h2>
+
+
+
+
+@foreach (var item in Model)
+{
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <h3>@item.name  @item.price  ( @item.Category.name )</h3>
+                <img src="@Url.Content(item.image)" alt="..." width="242" height="200">
+                <div class="caption">
+                    <p>@item.description</p>
+
+                        @Html.ActionLink("Update", "Edit", new { id = item.Id }, new { @class = "btn btn-info" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+
+
+
+
+
+                 </div>
+             </div>
+         </div>
+
+
+}
+
+

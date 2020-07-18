@@ -1,0 +1,160 @@
+﻿@model IEnumerable<database.Models.Product>
+
+@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>HomePage</h2>
+
+
+
+@foreach (var item in Model)
+{
+
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="@Url.Content(item.image)" alt="..." width="242" height="200">
+            <div class="caption">
+                <h3>@item.name</h3>
+                <p>@item.price</p>
+                
+            </div>
+        </div>
+    </div>
+
+}
+
+
+@*--------------------------------------------------footer--------------------------------*@
+
+<html>
+
+<head>
+
+</head>
+<style>
+    .footer {
+        background: #303036;
+        color: #d3d3d3;
+        height: 500px;
+        position: relative;
+        margin-top: 30px;
+        float: left;
+        width: 100%;
+        display: inline;
+    }
+
+    .footer_bottom {
+        background: #343a40;
+        color: #686868;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding-top: 20px;
+        k
+    }
+
+    .bord {
+        float: left;
+    }
+
+    .contact {
+        float: right;
+        width: 50%;
+        height: 500px;
+    }
+
+    .input1 {
+        display: block;
+        width: 350px;
+        height: 40px;
+        margin-top: 20px;
+        background: #ECE0E0;
+    }
+
+    .texterea1 {
+        display: block;
+        width: 400px;
+        height: 80px;
+        margin-top: 30px;
+        background: #ECE0E0;
+    }
+
+    .logo-text {
+        color: #05f7ff;
+        margin-left: 20px;
+    }
+
+    span.title2 {
+        color: white;
+    }
+
+    .big {
+        width: 120px;
+        height: 30px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 50px;
+        background: green;
+    }
+
+    .contact_us {
+        color: #05f7ff;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+    .par {
+        margin-left: 20px;
+    }
+
+    .icons {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <div class="footer">
+        <div class="bord">
+            <div class="footer_section about">
+                <h1 class="logo-text"><span class="title2">Awa</span>Inspirres</h1>
+                <p class="par">
+                    Consumers find a product of interest by visiting the website of<br />
+                    the retailer directly or by searching among alternative vendors <br />
+                    using a shopping search engine.Once a particular product has been<br />
+                    found on the website of the seller, most online retailers use<br />
+                    shopping cart software
+                </p>
+                <div class="icons">
+                    <span><i class="fa-phone"></i> &nbsp; 123-45-789</span>
+                    <br>
+                    <span><i class="fa-envelope"></i> &nbsp; info@awainspires.com</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h2 class="contact_us"> Contact <span class="title2">Us</span></h2>
+            <br>
+            <form action="index.html" method="post">
+                <input type="email" name="email" class="input1" placeholder="Your email address...">
+                <textarea name="message" class="texterea1" placeholder="Your message..."></textarea>
+                <button type="submit" class="big">
+                    <i class="fas fa-envelope"></i>
+                    Send
+                </button>
+            </form>
+        </div>
+        <div class="footer_bottom">
+            &copy;Codingpoets.com/Designed by Awa Melvine
+        </div>
+
+
+</body>
+</html>
